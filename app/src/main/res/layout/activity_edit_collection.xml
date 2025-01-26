@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.euichankim.idolsnapandroid.Activity.EditCollectionActivity"
+    android:background="?attr/primaryBackgroundColor">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/editcollection_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="?attr/primaryBackgroundColor"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/editcollection_backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:adjustViewBounds="true"
+            android:background="?attr/primaryBackgroundColor"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_arrow_backward"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="?attr/primaryTextColor" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:fontFamily="@font/plusjakartasans_medium"
+            android:gravity="center|start"
+            android:paddingBottom="4dp"
+            android:text="@string/editcollection"
+            android:textColor="?attr/primaryTextColor"
+            android:textSize="19dp"
+            app:layout_constraintLeft_toRightOf="@id/editcollection_backBtn"
+            app:layout_constraintRight_toLeftOf="@id/editcollection_completeBtn" />
+
+        <ImageButton
+            android:id="@+id/editcollection_completeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:adjustViewBounds="true"
+            android:background="?attr/primaryBackgroundColor"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_done"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/red" />
+
+        <ProgressBar
+            android:id="@+id/editcollection_progressbar"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:indeterminateTint="@color/red"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/editcollection_completeBtn"
+            app:layout_constraintLeft_toLeftOf="@id/editcollection_completeBtn"
+            app:layout_constraintRight_toRightOf="@id/editcollection_completeBtn"
+            app:layout_constraintTop_toTopOf="@id/editcollection_completeBtn" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        android:orientation="vertical"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editcollection_toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.35"
+                    android:id="@+id/editcollectionn_vertguideline1"/>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.65"
+                    android:id="@+id/editcollectionn_vertguideline2"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/editcollectionn_vertguideline2"
+                    app:layout_constraintLeft_toRightOf="@id/editcollectionn_vertguideline1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="32dp"
+                    android:layout_marginTop="16dp"
+                    app:cardCornerRadius="17dp"
+                    app:cardElevation="0dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/editcollection_imageview"
+                        android:background="?attr/whitesmoketodarkgrey"/>
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/plusjakartasans_medium"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:text="@string/collectionname"
+                    android:textColor="?attr/primaryTextColor"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/editcollection_nameEdtx"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/primaryBackgroundColor"
+                    android:fontFamily="@font/plusjakartasans_medium"
+                    android:hint="@string/collectionname"
+                    android:inputType="textShortMessage"
+                    android:paddingStart="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="16dp"
+                    android:maxLength="100"
+                    android:paddingBottom="32dp"
+                    android:textColor="?attr/primaryTextColor"
+                    android:textColorHint="@color/grey"
+                    android:textSize="19dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/plusjakartasans_medium"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:text="@string/visibility"
+                    android:textColor="?attr/primaryTextColor"
+                    android:textSize="14dp" />
+
+                <Switch
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="16dp"
+                    android:id="@+id/editcollection_visibilitySwitch"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="16dp"
+                    android:maxLength="100"
+                    android:paddingBottom="32dp"
+                    android:textSize="19dp"
+                    android:textColor="?attr/primaryTextColor"
+                    android:fontFamily="@font/plusjakartasans_medium"
+                    android:text="@string/keepcollectionprivate"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/editcollection_deleteTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/primaryBackgroundColor"
+                    android:fontFamily="@font/plusjakartasans_medium"
+                    android:paddingStart="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="16dp"
+                    android:text="@string/deletecollection"
+                    android:textColor="@color/red"
+                    android:textColorHint="@color/grey"
+                    android:textSize="19dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

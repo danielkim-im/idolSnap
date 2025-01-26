@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/primaryBackgroundColor">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/itemuser_profileImg"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        app:civ_border_color="?attr/whitesmoketodarkgrey"
+        app:civ_border_width="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical"
+        android:overScrollMode="never"
+        android:paddingBottom="4dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="@id/itemuser_profileImg"
+        app:layout_constraintLeft_toRightOf="@id/itemuser_profileImg"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/itemuser_profileImg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical|start">
+            <TextView
+                android:id="@+id/itemuser_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/plusjakartasans_bold"
+                android:maxLines="1"
+                android:paddingBottom="4dp"
+                android:textColor="?attr/primaryTextColor"
+                android:textSize="17dp" />
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:adjustViewBounds="true"
+                android:visibility="gone"
+                android:scaleType="fitCenter"
+                android:id="@+id/itemuser_verifiedicon"
+                android:src="@drawable/ic_verified"
+                app:tint="@color/red" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/itemuser_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/plusjakartasans_medium"
+            android:maxLines="1"
+            android:textColor="@color/grey"
+            android:textSize="14dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

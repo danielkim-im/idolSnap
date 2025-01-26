@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:TagsEditText="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/primaryBackgroundColor"
+    tools:context="com.euichankim.idolsnapandroid.Activity.CreateSnapActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/createpost_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="?attr/primaryBackgroundColor"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/createpost_closeBtn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:adjustViewBounds="true"
+            android:background="?attr/primaryBackgroundColor"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_arrow_backward"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="?attr/primaryTextColor" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:fontFamily="@font/plusjakartasans_medium"
+            android:gravity="center|start"
+            android:paddingBottom="4dp"
+            android:text="@string/createsnap"
+            android:textColor="?attr/primaryTextColor"
+            android:textSize="19dp"
+            app:layout_constraintLeft_toRightOf="@id/createpost_closeBtn"
+            app:layout_constraintRight_toLeftOf="@id/createpost_uploadBtn" />
+
+        <ImageButton
+            android:id="@+id/createpost_uploadBtn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:adjustViewBounds="true"
+            android:background="?attr/primaryBackgroundColor"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_done"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/red" />
+
+        <ProgressBar
+            android:id="@+id/createpost_progressbar"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:indeterminateTint="@color/red"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/createpost_uploadBtn"
+            app:layout_constraintLeft_toLeftOf="@id/createpost_uploadBtn"
+            app:layout_constraintRight_toRightOf="@id/createpost_uploadBtn"
+            app:layout_constraintTop_toTopOf="@id/createpost_uploadBtn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        TagsEditText:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createpost_toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        TagsEditText:layout_constraintLeft_toLeftOf="parent"
+                        TagsEditText:layout_constraintRight_toLeftOf="@id/createpost_vertguideline1"
+                        TagsEditText:layout_constraintTop_toTopOf="@id/createpost_cardview">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/plusjakartasans_medium"
+                            android:paddingEnd="16dp"
+                            android:text="@string/description"
+                            android:textColor="?attr/primaryTextColor"
+                            android:textSize="14dp" />
+
+                        <EditText
+                            android:id="@+id/createpost_descEdtx"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?attr/primaryBackgroundColor"
+                            android:fontFamily="@font/plusjakartasans_medium"
+                            android:gravity="top"
+                            android:hint="@string/addsnapdescription"
+                            android:inputType="textMultiLine"
+                            android:maxLength="2200"
+                            android:paddingEnd="16dp"
+                            android:textColor="?attr/primaryTextColor"
+                            android:textColorHint="@color/grey"
+                            android:textSize="19dp" />
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/createpost_vertguideline1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.65" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/createpost_cardview"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        TagsEditText:layout_constraintLeft_toRightOf="@id/createpost_vertguideline1"
+                        TagsEditText:layout_constraintRight_toRightOf="parent"
+                        app:cardCornerRadius="17dp"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/createpost_imageview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:transitionName="snapFullScreen" />
+                    </androidx.cardview.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?attr/whitesmoketodarkgrey" />
+
+            <LinearLayout
+                android:id="@+id/createpost_addSourceLin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:paddingTop="2dp"
+                    android:src="@drawable/ic_globe"
+                    app:tint="?attr/primaryTextColor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/plusjakartasans_medium"
+                        android:paddingStart="16dp"
+                        android:text="@string/addsource"
+                        android:textColor="?attr/primaryTextColor"
+                        android:textSize="17dp" />
+
+                    <TextView
+                        android:id="@+id/createpost_addSourceTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/plusjakartasans_medium"
+                        android:paddingStart="16dp"
+                        android:textColor="@color/red"
+                        android:textSize="14dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?attr/whitesmoketodarkgrey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:paddingTop="2dp"
+                    android:src="@drawable/ic_comment"
+                    app:tint="?attr/primaryTextColor" />
+
+                <Switch
+                    android:id="@+id/createpost_commentSwitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:fontFamily="@font/plusjakartasans_medium"
+                    android:paddingStart="16dp"
+                    android:text="@string/allowcomments"
+                    android:textColor="?attr/primaryTextColor"
+                    android:textSize="17dp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?attr/whitesmoketodarkgrey" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

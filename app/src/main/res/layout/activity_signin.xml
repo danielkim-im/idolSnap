@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/primaryBackgroundColor"
+    tools:context="com.euichankim.idolsnapandroid.Activity.SignInActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/signin_horguideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/signin_vertguideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/signin_vertguideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/signin_horguideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/signin_backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:adjustViewBounds="true"
+            android:background="?attr/primaryBackgroundColor"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_arrow_backward"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="?attr/primaryTextColor" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/plusjakartasans_semibold"
+        android:text="@string/signin"
+        android:textColor="?attr/primaryTextColor"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toTopOf="@id/signin_horguideline1"
+        app:layout_constraintLeft_toRightOf="@id/signin_vertguideline1"
+        app:layout_constraintRight_toLeftOf="@id/signin_vertguideline2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/signin_edtxLinearlayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/signin_signinBtn"
+        app:layout_constraintLeft_toRightOf="@id/signin_vertguideline1"
+        app:layout_constraintRight_toLeftOf="@id/signin_vertguideline2"
+        app:layout_constraintTop_toBottomOf="@id/signin_horguideline1">
+
+        <EditText
+            android:id="@+id/signin_emailEdtx"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/background_edittext_custom"
+            android:fontFamily="@font/plusjakartasans_medium"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="?attr/primaryTextColor"
+            android:textColorHint="@color/grey"
+            android:textSize="17dp" />
+
+        <EditText
+            android:id="@+id/signin_passwordEdtx"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/background_edittext_custom"
+            android:fontFamily="@font/plusjakartasans_medium"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="?attr/primaryTextColor"
+            android:textColorHint="@color/grey"
+            android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/signin_forgotPswdTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/plusjakartasans_medium"
+            android:text="@string/forgotpassword"
+            android:textAlignment="textStart"
+            android:textColor="@color/grey"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/signin_progressbar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:indeterminateTint="@color/red"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/signin_signinBtn"
+        app:layout_constraintLeft_toLeftOf="@id/signin_signinBtn"
+        app:layout_constraintRight_toRightOf="@id/signin_signinBtn"
+        app:layout_constraintTop_toTopOf="@id/signin_signinBtn" />
+
+    <ImageButton
+        android:id="@+id/signin_signinBtn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/background_signinup_floatingbtn"
+        android:elevation="8dp"
+        android:padding="8dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_arrow_forward"
+        app:layout_constraintBottom_toTopOf="@id/signin_horguideline2"
+        app:layout_constraintLeft_toRightOf="@id/signin_vertguideline1"
+        app:layout_constraintRight_toLeftOf="@id/signin_vertguideline2"
+        app:layout_constraintTop_toBottomOf="@id/signin_edtxLinearlayout"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/signin_gotoSignup"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/plusjakartasans_medium"
+        android:gravity="center"
+        android:text="@string/donthaveanaccountyet"
+        android:textColor="@color/grey"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/signin_vertguideline1"
+        app:layout_constraintRight_toLeftOf="@id/signin_vertguideline2"
+        app:layout_constraintTop_toBottomOf="@id/signin_horguideline2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

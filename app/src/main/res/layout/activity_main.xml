@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/primaryBackgroundColor"
+    tools:context="com.euichankim.idolsnapandroid.Activity.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/main_framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/main_bottomnav"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/background_main_bottomnav"
+        app:elevation="0dp"
+        app:itemBackground="@android:color/transparent"
+        app:itemIconTint="@drawable/main_bottomnav_itemcolor"
+        app:itemTextColor="@drawable/main_bottomnav_itemcolor"
+        app:labelVisibilityMode="unlabeled"
+        app:itemRippleColor="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/menu_bottomnav_item" />
+</androidx.constraintlayout.widget.ConstraintLayout>

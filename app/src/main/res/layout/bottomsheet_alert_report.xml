@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/primaryBackgroundColor">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/collectiondelete_vertguideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/collectiondelete_vertguideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/collectiondelete_vertguideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <TextView
+        android:id="@+id/alertreport_titleTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/plusjakartasans_semibold"
+        android:text="@string/report"
+        android:textColor="?attr/primaryTextColor"
+        android:textSize="32dp"
+        app:layout_constraintLeft_toRightOf="@id/collectiondelete_vertguideline2"
+        app:layout_constraintRight_toLeftOf="@id/collectiondelete_vertguideline3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/alertreport_descTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/plusjakartasans_medium"
+        android:text="@string/report_desc"
+        android:textColor="?attr/primaryTextColor"
+        android:textSize="17dp"
+        app:layout_constraintLeft_toRightOf="@id/collectiondelete_vertguideline2"
+        app:layout_constraintRight_toLeftOf="@id/collectiondelete_vertguideline3"
+        app:layout_constraintTop_toBottomOf="@id/alertreport_titleTxt" />
+
+    <TextView
+        android:id="@+id/alertreport_reportTxt"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/background_snapdelete_btn"
+        android:backgroundTint="@color/red"
+        android:clickable="true"
+        android:fontFamily="@font/plusjakartasans_medium"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:text="@string/report"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/collectiondelete_vertguideline2"
+        app:layout_constraintRight_toLeftOf="@id/collectiondelete_vertguideline1"
+        app:layout_constraintTop_toBottomOf="@id/alertreport_descTxt" />
+
+    <TextView
+        android:id="@+id/alertreport_cancelTxt"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/background_snapdelete_btn"
+        android:clickable="true"
+        android:fontFamily="@font/plusjakartasans_medium"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textColor="?attr/primaryTextColor"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/collectiondelete_vertguideline1"
+        app:layout_constraintRight_toLeftOf="@id/collectiondelete_vertguideline3"
+        app:layout_constraintTop_toBottomOf="@id/alertreport_descTxt" />
+
+    <ProgressBar
+        android:id="@+id/alertreport_progressbar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:indeterminateTint="@color/red"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/alertreport_descTxt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

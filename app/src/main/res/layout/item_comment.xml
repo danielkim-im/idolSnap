@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/primaryBackgroundColor">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/commentitem_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/commentitem_profileImg"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        app:civ_border_color="?attr/whitesmoketodarkgrey"
+        app:civ_border_width="1dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/commentitem_usernameLin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:gravity="center_vertical|start"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toRightOf="@id/commentitem_profileImg"
+        app:layout_constraintRight_toLeftOf="@id/commentitem_guideline"
+        app:layout_constraintTop_toTopOf="@id/commentitem_profileImg">
+
+        <TextView
+            android:id="@+id/commentitem_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/plusjakartasans_bold"
+            android:paddingBottom="4dp"
+            android:textColor="?attr/primaryTextColor"
+            android:textSize="14dp" />
+
+        <ImageView
+            android:id="@+id/commentitem_verifiedIcon"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_verified"
+            android:visibility="gone"
+            app:tint="@color/red" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/comment_commentTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="@font/plusjakartasans_medium"
+        android:textColor="?attr/primaryTextColor"
+        android:textSize="14dp"
+        app:layout_constraintLeft_toRightOf="@id/commentitem_profileImg"
+        app:layout_constraintRight_toLeftOf="@id/commentitem_guideline"
+        app:layout_constraintTop_toBottomOf="@id/commentitem_usernameLin" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="start|center_vertical"
+        android:orientation="horizontal"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/comment_commentTxt"
+        app:layout_constraintRight_toRightOf="@id/comment_commentTxt"
+        app:layout_constraintTop_toBottomOf="@id/comment_commentTxt">
+
+        <ImageButton
+            android:id="@+id/comment_likeBtn"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/ic_heart_outline"
+            android:backgroundTint="@color/grey"
+            android:scaleType="fitCenter"
+            app:tint="@color/grey" />
+
+        <TextView
+            android:id="@+id/comment_likeCountTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:paddingBottom="2dp"
+            android:textColor="@color/grey"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/comment_moreBtn"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_margin="16dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/ic_more_vert"
+        android:backgroundTint="@color/grey"
+        android:scaleType="fitCenter"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/grey" />
+</androidx.constraintlayout.widget.ConstraintLayout>

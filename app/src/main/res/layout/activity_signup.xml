@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/primaryBackgroundColor"
+    tools:context="com.euichankim.idolsnapandroid.Activity.SignUpActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/signup_horguideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/signup_vertguideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/signup_vertguideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/signup_horguideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/signup_backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:adjustViewBounds="true"
+            android:background="?attr/primaryBackgroundColor"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_arrow_backward"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="?attr/primaryTextColor" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/plusjakartasans_semibold"
+        android:text="@string/signup"
+        android:textColor="?attr/primaryTextColor"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toTopOf="@id/signup_horguideline1"
+        app:layout_constraintLeft_toRightOf="@id/signup_vertguideline1"
+        app:layout_constraintRight_toLeftOf="@id/signup_vertguideline2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/signup_edtxLinearlayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/signup_signupBtn"
+        app:layout_constraintLeft_toRightOf="@id/signup_vertguideline1"
+        app:layout_constraintRight_toLeftOf="@id/signup_vertguideline2"
+        app:layout_constraintTop_toBottomOf="@id/signup_horguideline1">
+
+        <EditText
+            android:id="@+id/signup_emailEdtx"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/background_edittext_custom"
+            android:fontFamily="@font/plusjakartasans_medium"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="?attr/primaryTextColor"
+            android:textColorHint="@color/grey"
+            android:textSize="17dp" />
+
+        <EditText
+            android:id="@+id/signup_passwordEdtx"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/background_edittext_custom"
+            android:fontFamily="@font/plusjakartasans_medium"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="?attr/primaryTextColor"
+            android:textColorHint="@color/grey"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/signup_progressbar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:visibility="gone"
+        android:indeterminateTint="@color/red"
+        app:layout_constraintTop_toTopOf="@id/signup_signupBtn"
+        app:layout_constraintBottom_toBottomOf="@id/signup_signupBtn"
+        app:layout_constraintRight_toRightOf="@id/signup_signupBtn"
+        app:layout_constraintLeft_toLeftOf="@id/signup_signupBtn"/>
+
+    <ImageButton
+        android:id="@+id/signup_signupBtn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/background_signinup_floatingbtn"
+        android:elevation="8dp"
+        android:padding="8dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_arrow_forward"
+        app:layout_constraintBottom_toTopOf="@id/signup_horguideline2"
+        app:layout_constraintRight_toLeftOf="@id/signup_vertguideline2"
+        app:layout_constraintLeft_toRightOf="@id/signup_vertguideline1"
+        app:layout_constraintTop_toBottomOf="@id/signup_edtxLinearlayout"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/signup_gotosigninTxt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/plusjakartasans_medium"
+        android:gravity="center"
+        android:text="@string/alreadyhaveanaccount"
+        android:textColor="@color/grey"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/signup_vertguideline1"
+        app:layout_constraintRight_toLeftOf="@id/signup_vertguideline2"
+        app:layout_constraintTop_toBottomOf="@id/signup_horguideline2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

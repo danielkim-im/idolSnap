@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/primaryBackgroundColor"
+    tools:context="com.euichankim.idolsnapandroid.Activity.AuthActivity">
+
+    <ProgressBar
+        android:id="@+id/auth_progressbar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:indeterminateTint="@color/red"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/auth_vertguideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/auth_vertguideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/auth_horguideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/auth_horguideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/auth_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/plusjakartasans_bold"
+        android:text="@string/auth_title"
+        android:textAlignment="textStart"
+        android:textColor="?attr/primaryTextColor"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toTopOf="@id/auth_horguideline2"
+        app:layout_constraintLeft_toRightOf="@id/auth_vertguideline1"
+        app:layout_constraintRight_toLeftOf="@id/auth_vertguideline2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/auth_loginLinearlayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/auth_horguideline1"
+        app:layout_constraintLeft_toRightOf="@id/auth_vertguideline1"
+        app:layout_constraintRight_toLeftOf="@id/auth_vertguideline2"
+        app:layout_constraintTop_toBottomOf="@id/auth_horguideline2">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/auth_googleSignInBtn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="?attr/whitesmoketodarkgrey"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="32dp"
+            app:cardElevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/auth_vertguideline3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.24" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:adjustViewBounds="true"
+                    android:padding="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_google"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/auth_vertguideline3"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/plusjakartasans_semibold"
+                    android:gravity="center"
+                    android:text="@string/auth_continueGoogle"
+                    android:textColor="?attr/primaryTextColor"
+                    android:textSize="17dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/auth_emailSignUpBtn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:backgroundTint="?attr/primaryTextColor"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="32dp"
+            app:cardElevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/auth_vertguideline4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.24" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:adjustViewBounds="true"
+                    android:padding="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_mail"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/auth_vertguideline4"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="?attr/primaryBackgroundColor" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/plusjakartasans_semibold"
+                    android:gravity="center"
+                    android:text="@string/signup"
+                    android:textColor="?attr/primaryBackgroundColor"
+                    android:textSize="17dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/auth_gotosigninTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/plusjakartasans_medium"
+            android:text="@string/alreadyhaveanaccount"
+            android:textAlignment="textStart"
+            android:textColor="@color/grey"
+            android:textSize="17dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/auth_vertguideline1"
+            app:layout_constraintRight_toLeftOf="@id/auth_vertguideline2"
+            app:layout_constraintTop_toBottomOf="@id/auth_horguideline1" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/auth_noticeTxt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/plusjakartasans_medium"
+        android:gravity="start|center"
+        android:text="@string/auth_notice"
+        android:textColor="@color/grey"
+        android:textSize="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/auth_vertguideline1"
+        app:layout_constraintRight_toLeftOf="@id/auth_vertguideline2"
+        app:layout_constraintTop_toBottomOf="@id/auth_horguideline1" />
+</androidx.constraintlayout.widget.ConstraintLayout>

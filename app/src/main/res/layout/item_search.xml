@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/searchitem_cons"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="?attr/primaryBackgroundColor"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
+
+    <ImageButton
+        android:id="@+id/searchitem_searchicon"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:adjustViewBounds="true"
+        android:background="?attr/primaryBackgroundColor"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="?attr/primaryTextColor" />
+
+    <TextView
+        android:id="@+id/searchitem_textview"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:fontFamily="@font/plusjakartasans_medium"
+        android:gravity="center|start"
+        android:maxLines="1"
+        android:paddingBottom="4dp"
+        android:text="Text"
+        android:textColor="?attr/primaryTextColor"
+        android:textSize="17dp"
+        app:layout_constraintLeft_toRightOf="@id/searchitem_searchicon"
+        app:layout_constraintRight_toRightOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

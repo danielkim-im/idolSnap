@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/primaryBackgroundColor"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/snap_more_share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_share"
+            app:tint="?attr/primaryTextColor" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/plusjakartasans_medium"
+            android:paddingStart="16dp"
+            android:text="@string/share"
+            android:textColor="?attr/primaryTextColor"
+            android:textSize="17dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/snap_more_link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_link"
+            app:tint="?attr/primaryTextColor" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/plusjakartasans_medium"
+            android:paddingStart="16dp"
+            android:text="@string/link"
+            android:textColor="?attr/primaryTextColor"
+            android:textSize="17dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/snap_more_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_collection_outline"
+            app:tint="?attr/primaryTextColor" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/plusjakartasans_medium"
+            android:paddingStart="16dp"
+            android:text="@string/savetocollection"
+            android:textColor="?attr/primaryTextColor"
+            android:textSize="17dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/snap_more_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_edit"
+            app:tint="?attr/primaryTextColor" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/plusjakartasans_medium"
+            android:paddingStart="16dp"
+            android:text="@string/edit"
+            android:textColor="?attr/primaryTextColor"
+            android:textSize="17dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/snap_more_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_trash"
+            app:tint="@color/red" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/plusjakartasans_medium"
+            android:paddingStart="16dp"
+            android:text="@string/delete"
+            android:textColor="@color/red"
+            android:textSize="17dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/snap_more_hide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_hide"
+            app:tint="?attr/primaryTextColor" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/plusjakartasans_medium"
+            android:paddingStart="16dp"
+            android:text="@string/hide"
+            android:textColor="?attr/primaryTextColor"
+            android:textSize="17dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/snap_more_report"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_report"
+            app:tint="@color/red" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/plusjakartasans_medium"
+            android:paddingStart="16dp"
+            android:text="@string/report"
+            android:textColor="@color/red"
+            android:textSize="17dp" />
+    </LinearLayout>
+</LinearLayout>

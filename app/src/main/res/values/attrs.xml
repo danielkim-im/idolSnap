@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ds">
+        <attr name="primaryBackgroundColor" format="color"/>
+        <attr name="primaryTextColor" format="color"/>
+        <attr name="whitesmoketodarkgrey" format="color"/>
+        <attr name="lightgreytodarkgrey" format="color"/>
+        <attr name="darkgreytolightgrey" format="color"/>
+    </declare-styleable>
+</resources>

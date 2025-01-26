@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/primaryBackgroundColor"
+    tools:context="com.euichankim.idolsnapandroid.Activity.EmailVerificationActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ev_horguideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ev_vertguideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ev_vertguideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ev_horguideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/plusjakartasans_semibold"
+        android:text="@string/emailverification"
+        android:textColor="?attr/primaryTextColor"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toTopOf="@id/ev_horguideline1"
+        app:layout_constraintLeft_toRightOf="@id/ev_vertguideline1"
+        app:layout_constraintRight_toLeftOf="@id/ev_vertguideline2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ev_descriptionTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/plusjakartasans_medium"
+        android:text="@string/processing"
+        android:textAlignment="center"
+        android:textColor="?attr/primaryTextColor"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@id/ev_verifyBtn"
+        app:layout_constraintLeft_toRightOf="@id/ev_vertguideline1"
+        app:layout_constraintRight_toLeftOf="@id/ev_vertguideline2"
+        app:layout_constraintTop_toBottomOf="@id/ev_horguideline1" />
+
+
+    <ProgressBar
+        android:id="@+id/ev_progressbar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:indeterminateTint="@color/red"
+        app:layout_constraintBottom_toBottomOf="@id/ev_verifyBtn"
+        app:layout_constraintLeft_toLeftOf="@id/ev_verifyBtn"
+        app:layout_constraintRight_toRightOf="@id/ev_verifyBtn"
+        app:layout_constraintTop_toTopOf="@id/ev_verifyBtn" />
+
+    <ImageButton
+        android:id="@+id/ev_verifyBtn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/background_signinup_floatingbtn"
+        android:elevation="8dp"
+        android:padding="8dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_done"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/ev_horguideline2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ev_descriptionTxt"
+        app:tint="@color/white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

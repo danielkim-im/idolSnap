@@ -1,0 +1,54 @@
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable-v24/biasitem_custom_background.xml" value="0.255" />
+        <entry key="app/src/main/res/drawable/auth_background_bg.xml" value="0.249" />
+        <entry key="app/src/main/res/drawable/auth_gradient_background.xml" value="0.249" />
+        <entry key="app/src/main/res/drawable/biasitem_custom_background.xml" value="0.255" />
+        <entry key="app/src/main/res/drawable/edittext_custom_background.xml" value="0.255" />
+        <entry key="app/src/main/res/drawable/ic_add.xml" value="0.24" />
+        <entry key="app/src/main/res/drawable/ic_arrow_backward.xml" value="0.24" />
+        <entry key="app/src/main/res/drawable/ic_arrow_forward.xml" value="0.249" />
+        <entry key="app/src/main/res/drawable/ic_done.xml" value="0.249" />
+        <entry key="app/src/main/res/drawable/ic_home.xml" value="0.2325" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.249" />
+        <entry key="app/src/main/res/drawable/ic_mail.xml" value="0.249" />
+        <entry key="app/src/main/res/drawable/ic_notification.xml" value="0.24" />
+        <entry key="app/src/main/res/drawable/ic_person.xml" value="0.24" />
+        <entry key="app/src/main/res/drawable/ic_profile.xml" value="0.249" />
+        <entry key="app/src/main/res/drawable/ic_search.xml" value="0.2325" />
+        <entry key="app/src/main/res/drawable/main_bottomnav_background.xml" value="0.24" />
+        <entry key="app/src/main/res/drawable/main_bottomnav_itemcolor.xml" value="0.24" />
+        <entry key="app/src/main/res/drawable/mainbottomnav_custom_background.xml" value="0.24" />
+        <entry key="app/src/main/res/drawable/menu_bottomnav_itemcolor.xml" value="0.249" />
+        <entry key="app/src/main/res/drawable/signup_edittext_background.xml" value="0.249" />
+        <entry key="app/src/main/res/drawable/signup_signupbtn_background.xml" value="0.249" />
+        <entry key="app/src/main/res/layout/activity_auth.xml" value="0.25427350427350426" />
+        <entry key="app/src/main/res/layout/activity_biassetting.xml" value="0.25427350427350426" />
+        <entry key="app/src/main/res/layout/activity_email_verification.xml" value="0.25427350427350426" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.24188034188034188" />
+        <entry key="app/src/main/res/layout/activity_signin.xml" value="0.25427350427350426" />
+        <entry key="app/src/main/res/layout/activity_signup.xml" value="0.24188034188034188" />
+        <entry key="app/src/main/res/layout/activity_user_setup_name.xml" value="0.25427350427350426" />
+        <entry key="app/src/main/res/layout/activity_usersetup_bias.xml" value="0.25427350427350426" />
+        <entry key="app/src/main/res/layout/activity_usersetup_complete.xml" value="0.25427350427350426" />
+        <entry key="app/src/main/res/layout/bias_item.xml" value="0.25427350427350426" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25427350427350426" />
+        <entry key="app/src/main/res/layout/fragment_notification.xml" value="0.25427350427350426" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.25427350427350426" />
+        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.25427350427350426" />
+        <entry key="app/src/main/res/layout/signin_forgotpswd_bottomsheet.xml" value="0.25427350427350426" />
+        <entry key="app/src/main/res/menu/activity_bottom_nav_item.xml" value="0.25427350427350426" />
+        <entry key="app/src/main/res/menu/menu_bottomnav_item.xml" value="0.25427350427350426" />
+        <entry key="app/src/main/res/menu/menu_bottomnav_itemcolor.xml" value="0.2534188034188034" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
