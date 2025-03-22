@@ -40,6 +40,6 @@ IdolSnap was an Android application that allowed K-Pop fans to upload and share 
 4. Deploy the app to an emulator or physical Android device.
 
 ## Contact
-For more information, visit the project's website:
+For more information, visit the project's website.
 
 _Note: This project was archived in 2023 and is no longer actively maintained. Some dependencies or services may require updates for proper functionality._
