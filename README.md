@@ -2,7 +2,7 @@
 
 **A K-Pop fan-driven platform for sharing artist photos.**
 
-IdolSnap was an Android application that allowed K-Pop fans to upload and share images of their favorite artists. The app leveraged machine learning and cloud services to enhance user experience, including Google Cloud Vision AI for content moderation and Firebase for backend functionality. Launched in 2021, the platform grew to over 1,000 users worldwide and was archived in 2023.
+IdolSnap is an Android application that allowed K-Pop fans to upload and share images of their favorite artists. The app leveraged machine learning and cloud services to enhance user experience, including Google Cloud Vision AI for content moderation and Firebase for backend functionality. Launched in 2021, the platform grew to over 1,000 users worldwide and was archived in 2023.
 
 ## 🔧 Tech Stack
 
