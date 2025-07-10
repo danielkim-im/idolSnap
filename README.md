@@ -4,6 +4,8 @@
 
 IdolSnap is an Android application that allowed K-Pop fans to upload and share images of their favorite artists. The app leveraged machine learning and cloud services to enhance user experience, including Google Cloud Vision AI for content moderation and Firebase for backend functionality. Launched in 2021, the platform grew to over 1,000 users worldwide and was archived in 2023.
 
+![Image 1](storelisting_img.jpg)
+
 ## 🔧 Tech Stack
 
 ### Frontend (Mobile Application)
@@ -30,6 +32,12 @@ IdolSnap is an Android application that allowed K-Pop fans to upload and share i
   - Performance Benefits: Improved response times by delivering cached images from the closest CDN node.
   - Scalability: Handled high traffic loads efficiently by offloading requests from the primary storage.
   - Security: Protected against DDoS attacks and provided secure data transmission via HTTPS.
+
+## 🏆 Challenges & Achievements
+To handle potential issues from user-uploaded large images:
+- Designed a two-step pipeline: initial compression on device, followed by server-side resizing and WebP conversion using Cloud Functions.
+- Reduced Cloud Storage usage, minimized bandwidth load, and improved delivery speed through CDN optimization.
+- Developed an automated filtering system using Google Cloud Vision AI to detect and block explicit content.
 
 ## 📂 Repository Structure
 
